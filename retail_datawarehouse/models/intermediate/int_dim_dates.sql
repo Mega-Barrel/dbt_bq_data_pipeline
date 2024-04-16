@@ -7,10 +7,13 @@ WITH raw_dates AS (
 )
 
 SELECT
-    invoice_date,
-    EXTRACT(DATE FROM invoice_date) AS dt,
-    EXTRACT(WEEK FROM invoice_date) AS dt_wk,
-    EXTRACT(YEAR FROM invoice_date) AS dt_yr,
-    EXTRACT(MONTH FROM invoice_date) AS dt_m
+    invoice_date AS date_id,
+    EXTRACT(DATE FROM invoice_date) AS date,
+    EXTRACT(DAYOFWEEK FROM invoice_date) AS weekday,
+    EXTRACT(YEAR FROM invoice_date) AS year,
+    EXTRACT(MONTH FROM invoice_date) AS month,
+    EXTRACT(QUARTER FROM invoice_date) AS quarter,
+    FORMAT_DATETIME('%m-%Y', invoice_date) AS month_year,
+    FORMAT_DATETIME('%B-%Y', invoice_date) AS month_year_full
 FROM
     raw_dates
