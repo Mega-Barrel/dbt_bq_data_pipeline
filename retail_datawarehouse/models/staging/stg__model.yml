@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_retail
+    description: Staging retail model. Converts source column name to Lower.
+
+    columns:
+      - name: invoice_no
+        description: A 6-digit integral number uniquely assigned to each transaction. If this code starts with the letter 'c', it indicates a cancellation.
+
+      - name: stock_code
+        description: Product (item) code. A 5-digit integral number uniquely assigned to each distinct product.
+
+      - name: description
+        description: Product (item) name.
+      
+      - name: quantity
+        description: The quantities of each product (item) per transaction.
+
+      - name: invoice_date
+        description: The day and time when a transaction was generated.
+
+      - name: unit_price
+        description: Product price per unit in sterling (£).
+
+      - name: customer_id
+        description: A 5-digit integral number uniquely assigned to each customer.
+
+      - name: country
+        description: The name of the country where a customer resides.
