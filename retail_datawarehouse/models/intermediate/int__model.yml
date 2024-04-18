@@ -1,0 +1,19 @@
+version: 1
+
+models:
+  - name: int_dim_customers
+    description: Test
+    columns:
+      - name: customer_id
+        description: Test
+      - name: country
+        description: Test
+  
+  - name: int_dim_dates
+    description: Test
+
+  - name: int_dim_products
+    description: Test
+
+  - name: int_fct_invoice
+    description: Test
