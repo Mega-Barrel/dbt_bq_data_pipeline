@@ -1,4 +1,6 @@
 packages:
 - package: calogica/dbt_date
-  version: 0.10.0
-sha1_hash: c1e13148532c330a3e83acaab7b159f4418d670d
+  version: 0.10.1
+- package: dbt-labs/dbt_utils
+  version: 1.1.1
+sha1_hash: 645b7d433404be4c1af37b5c5922b71d0cf64f1b
