@@ -8,15 +8,24 @@ sources:
         columns:
           - name: InvoiceNo
             description: Invoice number. A 6-digit integral number uniquely assigned to each transaction. If this code starts with the letter 'c', it indicates a cancellation.
+
           - name: StockCode
             description: Product (item) code. A 5-digit integral number uniquely assigned to each distinct product.
+
+          - name: Description
+            description:  Product (item) name.
+
           - name: Quantiity
-            description: Product (item) name
-          - name: InvoiceDate
             description: The quantities of each product (item) per transaction.
+
+          - name: InvoiceDate
+            description: The day and time when a transaction was generated.
+
           - name: UnitPrice
             description: Product price per unit in sterling (£).
+
           - name: CustomerID
             description: A 5-digit integral number uniquely assigned to each customer.
+
           - name: Country
             description: Country name. Nominal. The name of the country where a customer resides.
