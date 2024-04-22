@@ -17,17 +17,11 @@ WITH fact_invoices AS (
 
 SELECT
     invoice_no,
-    dt.date_id,
-    dp.product_id,
-    dc.customer_id,
+    datetime_id,
+    customer_id,
+    product_id,
     quantity,
-    fi.unit_price,
+    unit_price,
     total_sale
 FROM
-    fact_invoices fi
-INNER JOIN {{ ref('int_dim_dates') }} dt ON fi.datetime_id = dt.date_id
-INNER JOIN {{ ref('int_dim_products') }} dp ON fi.product_id = dp.product_id
-INNER JOIN {{ ref('int_dim_customers') }} dc ON fi.customer_id = dc.customer_id
-
-
-
+    fact_invoices
