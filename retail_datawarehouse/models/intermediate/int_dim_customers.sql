@@ -1,7 +1,7 @@
 -- Intermediate Customer dim Model
 
 WITH customer_dim AS (
-    SELECT
+    SELECT DISTINCT 
         {{ dbt_utils.generate_surrogate_key(['customer_id', 'country']) }} as customer_id,
         country
     FROM
