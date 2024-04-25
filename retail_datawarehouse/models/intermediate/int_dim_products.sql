@@ -5,9 +5,9 @@ WITH product_dim AS (
         stock_code,
         description,
         CASE
-            WHEN invoice_no LIKE 'C%' THEN 'cancelled' 
-            ELSE 'accepted'
-        END AS product_status
+            WHEN invoice_no LIKE 'C%' THEN TRUE 
+            ELSE FALSE
+        END AS is_cancelled
     FROM
         {{ ref('stg_retail') }}
     WHERE
