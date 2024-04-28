@@ -17,7 +17,7 @@ SELECT
     EXTRACT(HOUR FROM invoice_date) AS hour,
     EXTRACT(MINUTE FROM invoice_date) AS minute,
     EXTRACT(QUARTER FROM invoice_date) AS quarter,
-    FORMAT_DATETIME('%m-%Y', invoice_date) AS month_year,
-    FORMAT_DATETIME('%B-%Y', invoice_date) AS month_year_full
+    FORMAT_DATETIME('%Y-%m', invoice_date) AS year_month,
+    FORMAT_DATETIME('%Y-%B', invoice_date) AS year_month_full
 FROM
     raw_dates
